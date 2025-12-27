@@ -2,7 +2,7 @@
 	"name": "DelimitedText1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureDataLakeStorage2",
+			"referenceName": "ls_adls_gen2",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
