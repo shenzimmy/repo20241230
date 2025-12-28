@@ -1,10 +1,6 @@
 {
 	"name": "AzureDatabricksDeltaLakeDataset1",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "AzureDatabricksDeltaLake1",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "AzureDatabricksDeltaLakeDataset",
 		"schema": []
