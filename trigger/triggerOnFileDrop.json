@@ -2,7 +2,7 @@
 	"name": "triggerOnFileDrop",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Started",
+		"runtimeState": "Stopped",
 		"pipelines": [
 			{
 				"pipelineReference": {
