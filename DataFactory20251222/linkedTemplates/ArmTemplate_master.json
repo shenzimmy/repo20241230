@@ -7,17 +7,13 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "DataFactory20251222"
 		},
-		"AzureDatabricksDeltaLake1_accessToken": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accessToken' of 'AzureDatabricksDeltaLake1'"
-		},
-		"AzureSynapseArtifacts1_properties_typeProperties_endpoint": {
-			"type": "string",
-			"defaultValue": "https://synapseworkspace0906.dev.azuresynapse.net"
-		},
 		"ls_adls_gen2_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://storageaccount2025zimmy.dfs.core.windows.net/"
+		},
+		"trigger1_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/081ebbc6-7a02-4758-934d-a63117d2e667/resourceGroups/ResourceGroup20251217/providers/Microsoft.Storage/storageAccounts/storageaccount2025zimmy"
 		},
 		"containerUri": {
 			"type": "string",
@@ -46,14 +42,11 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"AzureDatabricksDeltaLake1_accessToken": {
-						"value": "[parameters('AzureDatabricksDeltaLake1_accessToken')]"
-					},
-					"AzureSynapseArtifacts1_properties_typeProperties_endpoint": {
-						"value": "[parameters('AzureSynapseArtifacts1_properties_typeProperties_endpoint')]"
-					},
 					"ls_adls_gen2_properties_typeProperties_url": {
 						"value": "[parameters('ls_adls_gen2_properties_typeProperties_url')]"
+					},
+					"trigger1_properties_typeProperties_scope": {
+						"value": "[parameters('trigger1_properties_typeProperties_scope')]"
 					}
 				}
 			},
