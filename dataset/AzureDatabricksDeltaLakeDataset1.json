@@ -1,8 +1,0 @@
-{
-	"name": "AzureDatabricksDeltaLakeDataset1",
-	"properties": {
-		"annotations": [],
-		"type": "AzureDatabricksDeltaLakeDataset",
-		"schema": []
-	}
-}
