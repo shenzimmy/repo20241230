@@ -5,13 +5,13 @@
 		"factoryName": {
 			"value": "DataFactory20251222"
 		},
-		"AzureDataLakeStorage1_properties_typeProperties_url": {
-			"value": "https://storageaccount2025zimmy.dfs.core.windows.net/"
+		"AzureDatabricksDeltaLake1_accessToken": {
+			"value": ""
 		},
-		"AzureDataLakeStorage2_properties_typeProperties_url": {
-			"value": "https://storageaccount2025zimmy.dfs.core.windows.net/"
+		"AzureSynapseArtifacts1_properties_typeProperties_endpoint": {
+			"value": "https://synapseworkspace0906.dev.azuresynapse.net"
 		},
-		"AzureDataLakeStorage3_properties_typeProperties_url": {
+		"ls_adls_gen2_properties_typeProperties_url": {
 			"value": "https://storageaccount2025zimmy.dfs.core.windows.net/"
 		}
 	}

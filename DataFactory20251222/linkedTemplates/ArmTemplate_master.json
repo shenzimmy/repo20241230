@@ -7,15 +7,15 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "DataFactory20251222"
 		},
-		"AzureDataLakeStorage1_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://storageaccount2025zimmy.dfs.core.windows.net/"
+		"AzureDatabricksDeltaLake1_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricksDeltaLake1'"
 		},
-		"AzureDataLakeStorage2_properties_typeProperties_url": {
+		"AzureSynapseArtifacts1_properties_typeProperties_endpoint": {
 			"type": "string",
-			"defaultValue": "https://storageaccount2025zimmy.dfs.core.windows.net/"
+			"defaultValue": "https://synapseworkspace0906.dev.azuresynapse.net"
 		},
-		"AzureDataLakeStorage3_properties_typeProperties_url": {
+		"ls_adls_gen2_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://storageaccount2025zimmy.dfs.core.windows.net/"
 		},
@@ -46,14 +46,14 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"AzureDataLakeStorage1_properties_typeProperties_url": {
-						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					"AzureDatabricksDeltaLake1_accessToken": {
+						"value": "[parameters('AzureDatabricksDeltaLake1_accessToken')]"
 					},
-					"AzureDataLakeStorage2_properties_typeProperties_url": {
-						"value": "[parameters('AzureDataLakeStorage2_properties_typeProperties_url')]"
+					"AzureSynapseArtifacts1_properties_typeProperties_endpoint": {
+						"value": "[parameters('AzureSynapseArtifacts1_properties_typeProperties_endpoint')]"
 					},
-					"AzureDataLakeStorage3_properties_typeProperties_url": {
-						"value": "[parameters('AzureDataLakeStorage3_properties_typeProperties_url')]"
+					"ls_adls_gen2_properties_typeProperties_url": {
+						"value": "[parameters('ls_adls_gen2_properties_typeProperties_url')]"
 					}
 				}
 			},
