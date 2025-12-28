@@ -1,5 +1,5 @@
 {
-	"name": "trigger1",
+	"name": "triggerOnFileDrop",
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Started",
@@ -13,8 +13,8 @@
 		],
 		"type": "BlobEventsTrigger",
 		"typeProperties": {
-			"blobPathBeginsWith": "/bronze/blobs/",
-			"blobPathEndsWith": "*xlsx",
+			"blobPathBeginsWith": "/bronze/blobs/data/",
+			"blobPathEndsWith": ".xlsx",
 			"ignoreEmptyBlobs": true,
 			"scope": "/subscriptions/081ebbc6-7a02-4758-934d-a63117d2e667/resourceGroups/ResourceGroup20251217/providers/Microsoft.Storage/storageAccounts/storageaccount2025zimmy",
 			"events": [
