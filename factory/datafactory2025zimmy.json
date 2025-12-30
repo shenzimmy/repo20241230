@@ -1,0 +1,9 @@
+{
+	"name": "datafactory2025zimmy",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b278bc78-1746-4620-b86e-78d86e6c4805",
+		"tenantId": "890d8cbe-5b19-4b94-9304-bb338c0da99d"
+	}
+}
