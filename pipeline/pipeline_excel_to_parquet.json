@@ -109,7 +109,10 @@
 									"referenceName": "ds_parkquet_file",
 									"type": "DatasetReference",
 									"parameters": {
-										"ParquetFileName": "@item().name"
+										"ParquetFileName": {
+											"value": "@concat(replace(item().name,'.xlsx','.parquet'))",
+											"type": "Expression"
+										}
 									}
 								}
 							]
