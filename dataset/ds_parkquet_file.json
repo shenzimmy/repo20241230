@@ -2,7 +2,7 @@
 	"name": "ds_parkquet_file",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_adls_gen2",
+			"referenceName": "ls_gen2_store",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
