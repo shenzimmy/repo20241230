@@ -1,28 +1,24 @@
 {
-	"name": "ds_parkquet_file",
+	"name": "ds_excel_file",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_adls_gen2",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"OutputFileName": {
+			"FileName": {
 				"type": "string"
 			}
 		},
 		"annotations": [],
-		"type": "Parquet",
+		"type": "Excel",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@dataset().OutputFileName",
-					"type": "Expression"
-				},
-				"folderPath": "bronze",
+				"folderPath": "raw",
 				"fileSystem": "sales-data"
 			},
-			"compressionCodec": "snappy"
+			"firstRowAsHeader": true
 		},
 		"schema": []
 	}
