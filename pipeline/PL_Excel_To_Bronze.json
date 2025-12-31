@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "ds_adls_excel_folder",
+						"referenceName": "ds_excel_folder",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
@@ -64,13 +64,11 @@
 							"userProperties": [],
 							"typeProperties": {
 								"source": {
-									"type": "BinarySource",
+									"type": "ExcelSource",
 									"storeSettings": {
 										"type": "AzureBlobFSReadSettings",
-										"recursive": true
-									},
-									"formatSettings": {
-										"type": "BinaryReadSettings"
+										"recursive": true,
+										"enablePartitionDiscovery": false
 									}
 								},
 								"sink": {
@@ -82,12 +80,27 @@
 										"type": "ParquetWriteSettings"
 									}
 								},
-								"enableStaging": false
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
 							},
 							"inputs": [
 								{
-									"referenceName": "ds_adls_excel_folder",
-									"type": "DatasetReference"
+									"referenceName": "ds_excel_file",
+									"type": "DatasetReference",
+									"parameters": {
+										"ExcelFileName": {
+											"value": "@item().name",
+											"type": "Expression"
+										},
+										"ExcelSheetName": "Sheet1"
+									}
 								}
 							],
 							"outputs": [
@@ -95,7 +108,7 @@
 									"referenceName": "ds_parkquet_file",
 									"type": "DatasetReference",
 									"parameters": {
-										"OutputFileName": "@item().name"
+										"ParquetFileName": "@item().name"
 									}
 								}
 							]

@@ -6,8 +6,9 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"OutputFileName": {
-				"type": "string"
+			"ParquetFileName": {
+				"type": "string",
+				"defaultValue": "parquetXYZ"
 			}
 		},
 		"annotations": [],
@@ -16,7 +17,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@dataset().OutputFileName",
+					"value": "@dataset().ParquetFileName",
 					"type": "Expression"
 				},
 				"folderPath": "bronze",

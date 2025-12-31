@@ -6,15 +6,28 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"FileName": {
-				"type": "string"
+			"ExcelFileName": {
+				"type": "string",
+				"defaultValue": "xyz.xls"
+			},
+			"ExcelSheetName": {
+				"type": "string",
+				"defaultValue": "Sheet1"
 			}
 		},
 		"annotations": [],
 		"type": "Excel",
 		"typeProperties": {
+			"sheetName": {
+				"value": "@dataset().ExcelSheetName",
+				"type": "Expression"
+			},
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().ExcelFileName",
+					"type": "Expression"
+				},
 				"folderPath": "raw",
 				"fileSystem": "sales-data"
 			},

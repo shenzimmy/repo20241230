@@ -1,5 +1,5 @@
 {
-	"name": "ds_adls_excel_folder",
+	"name": "ds_excel_folder",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_adls_gen2",
