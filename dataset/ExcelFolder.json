@@ -14,9 +14,9 @@
 		"annotations": [],
 		"type": "Excel",
 		"typeProperties": {
-			"sheetName": "Sheet1",
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "*",
 				"folderPath": "raw/excel",
 				"fileSystem": "sales-data"
 			},
