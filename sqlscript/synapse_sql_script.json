@@ -1,0 +1,17 @@
+{
+	"name": "synapse_sql_script",
+	"properties": {
+		"content": {
+			"query": "\nUse master;\n\nSELECT * \nFROM sys.symmetric_keys \nWHERE name = '##MS_DatabaseMasterKey##';\n\nCREATE MASTER KEY\nENCRYPTION BY PASSWORD = 'YourStrongPasswordHere!';\n\n\nCREATE DATABASE SCOPED CREDENTIAL MyADLSCred \nWITH IDENTITY = 'Managed Identity';\n\n\n---------------------------------------------------------------------------------\n\nCREATE EXTERNAL DATA SOURCE MyParquetData\nWITH (\n    LOCATION = 'https://storageaccount2025zimmy.dfs.core.windows.net/sales-data',\n    CREDENTIAL = MyADLSCred\n);\n\n--https://storageaccount2025zimmy.blob.core.windows.net/sales-data\n\nCREATE EXTERNAL FILE FORMAT ParquetFormat\nWITH (\n    FORMAT_TYPE = PARQUET\n);\n\n\n---------------------------------------------------------------------------------\n\nCREATE VIEW dbo.MyView AS\nSELECT *\nFROM OPENROWSET(\n    BULK 'bronze/*.parquet',\n    DATA_SOURCE = 'MyParquetData',\n    FORMAT = 'PARQUET'\n) AS rows;\n\n\nSelect * from MyView\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "parquetdb",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
