@@ -1,5 +1,5 @@
 {
-	"name": "ExcelDataset",
+	"name": "ExcelFolder",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_ADLSGen2",
