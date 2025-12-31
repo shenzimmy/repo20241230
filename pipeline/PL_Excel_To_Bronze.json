@@ -30,6 +30,26 @@
 						"type": "BinaryReadSettings"
 					}
 				}
+			},
+			{
+				"name": "ForEach_Excel_Files",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Get_Excel_File_List",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Get_Excel_File_List').output.childItems",
+						"type": "Expression"
+					},
+					"batchCount": 5
+				}
 			}
 		],
 		"annotations": [],
