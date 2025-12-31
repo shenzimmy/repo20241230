@@ -48,7 +48,18 @@
 						"value": "@activity('Get_Excel_File_List').output.childItems",
 						"type": "Expression"
 					},
-					"batchCount": 5
+					"batchCount": 5,
+					"activities": [
+						{
+							"name": "Wait1",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 0
+							}
+						}
+					]
 				}
 			}
 		],
